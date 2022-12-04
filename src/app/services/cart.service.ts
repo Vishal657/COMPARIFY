@@ -22,7 +22,7 @@ export class CartService {
     this.cartService.next(cart_obj);
   }*/
   user_cred = localStorage.getItem('USER_CRED');
-  baseUrl:string = 'http://localhost:3000/cart';
+  baseUrl:string = 'http://localhost:9000/cart';
   constructor(private http: HttpClient) { }
 
   postCart(new_cart):Observable<any> {

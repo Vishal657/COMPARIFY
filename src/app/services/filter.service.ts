@@ -14,7 +14,7 @@ const httpOptions ={
 })
 export class FilterService {
 
-  baseUrl:string = 'http://localhost:3000/queries';
+  baseUrl:string = 'http://localhost:9000/netlify/functions/api/queries';
   constructor(private http: HttpClient) { }
 
 

@@ -21,16 +21,6 @@ export class RetailComponentComponent implements OnInit {
     retail: []
   };
   retailArray = [];
-  websiteArray = {
-    sangeetha_mobiles: {
-      url :"https://www.sangeethamobiles.com/",
-      src :"https://www.aexp-static.com/ecpglobal/ecatalogue/en-in/rewards/membership-rewards/getcatalogimage.mtw?productid=13140481&catalogid=142081&languageid=en_in&imagetype=primary&imagever=618141&hash=8b864d7e46ddf85d4ade5308c39ae140",
-    },
-    croma: {
-      url :"https://www.croma.com/",
-      src :"http://www.iamwire.com/wp-content/uploads/2012/04/Croma.jpg"
-    }
-  };
   constructor(private dts:DataTransferService, private vts:ViewTransferService, private breakpointObserver: BreakpointObserver, private loginService: LoginService, private cartService: CartService) { }
 
   ngOnInit(): void {

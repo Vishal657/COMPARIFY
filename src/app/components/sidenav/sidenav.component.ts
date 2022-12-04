@@ -112,9 +112,6 @@ export class SidenavComponent implements OnInit {
 
     var webData = {
       amazon: [],
-      flipkart: [],
-      paytm: [],
-      sangeethaMobiles: []
     };
 
     for(var i=0;i<mergedArray.length;i++) {
@@ -122,15 +119,6 @@ export class SidenavComponent implements OnInit {
       switch (website) {
         case 'amazon' :
           webData.amazon.push(mergedArray[i]);
-          break;
-        case 'flipkart' :
-          webData.flipkart.push(mergedArray[i]);
-          break;
-        case 'paytm' :
-          webData.paytm.push(mergedArray[i]);
-          break;
-        case 'sangeetha_mobiles' :
-          webData.sangeethaMobiles.push(mergedArray[i]);
           break;
         default:
           break;
@@ -204,3 +192,6 @@ export class SidenavComponent implements OnInit {
 
 
 }
+
+
+// sessionStorage.setItem('SESSION_DATA_ARRAY', JSON.stringify({"online":[{"id":1,"website":"amazon","store_type":"online","title":"Apple iPhone 13, 128GB, Blue - Unlocked (Renewed)","price":"637<span class=\"a-price-decimal\">.</span>","image":"https://m.media-amazon.com/images/I/61jLiCovxVL.jpg","href":"https://www.amazon.com/Apple-iPhone-13-128GB-Blue/dp/B09LNX6KQS/ref=sr_1_1?keywords=iphone+13&qid=1669137866&sr=8-1","rating":4,"numeric_price":637,"rating_bool":[true,true,true,true,false],"cart":false}]}))

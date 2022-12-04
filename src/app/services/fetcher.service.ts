@@ -15,7 +15,7 @@ const httpOptions ={
 })
 export class FetcherService {
 
-  baseUrl:string = 'http://localhost:3000/queries';
+  baseUrl:string = 'http://localhost:9000/netlify/functions/api/queries';
   constructor(private http: HttpClient) { }
 
   addQuery(query: Query):Observable<any> {

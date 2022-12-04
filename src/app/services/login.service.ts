@@ -14,8 +14,8 @@ const httpOptions ={
 })
 export class LoginService {
 
-  loginUrl:string = 'http://localhost:3000/login';
-  registerUrl:string = 'http://localhost:3000/register';
+  loginUrl:string = 'http://localhost:9000/login';
+  registerUrl:string = 'http://localhost:9000/register';
   constructor(private http: HttpClient) { }
 
   isAlreadyLogin() {

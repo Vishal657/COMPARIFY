@@ -8,7 +8,7 @@ import { MainComponentComponent } from './components/main-component/main-compone
 const routes: Routes = [
   { path: 'main', component: MainComponentComponent, children: [
     { path: 'onlinestores', component: OnlineComponentComponent, data: { animation: 'isRight' } },
-    { path: 'retailstores', component: RetailComponentComponent, data: { animation: 'isLeft' } },
+    // { path: 'retailstores', component: RetailComponentComponent, data: { animation: 'isLeft' } },
     { path: 'mergedresults', component: MergedComponentComponent },
     ]
   },

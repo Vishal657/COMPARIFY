@@ -26,26 +26,6 @@
                     <img src="{{websiteArray.amazon.src}}" style="max-width: 7.7rem;max-height: 1.5rem;">
                   </a>
                 </span>
-                <span *ngSwitchCase="'flipkart'">
-                  <a href="{{websiteArray.flipkart.url}}" target="blank">
-                    <img src="{{websiteArray.flipkart.src}}" style="max-width: 11rem;max-height: 3rem;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'paytm'">
-                  <a href="{{websiteArray.paytm.url}}" target="blank">
-                    <img src="{{websiteArray.paytm.src}}" style="max-width: 11rem;max-height: 3.125rem;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'sangeetha_mobiles'">
-                  <a href="{{websiteArray.sangeetha_mobiles.url}}" target="blank">
-                    <img src="{{websiteArray.sangeetha_mobiles.src}}" style="max-width: 11rem;max-height: 4rem;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'croma'">
-                  <a href="{{websiteArray.croma.url}}" target="blank">
-                    <img src="{{websiteArray.croma.src}}" style="max-width: 11rem;max-height: 4rem;">
-                  </a>
-                </span>
               </td>
             </tr>
             <tr>
@@ -85,21 +65,6 @@
                     <img src="{{websiteArray.amazon.src}}" style="max-width: 7.7em;max-height: 1.5em;">
                   </a>
                 </span>
-                <span *ngSwitchCase="'flipkart'">
-                  <a href="{{websiteArray.flipkart.url}}" target="blank">
-                    <img src="{{websiteArray.flipkart.src}}" style="max-width: 11em;max-height: 3em;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'paytm'">
-                  <a href="{{websiteArray.paytm.url}}" target="blank">
-                    <img src="{{websiteArray.paytm.src}}" style="max-width: 11em;max-height: 3.125em;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'sangeetha_mobiles'">
-                  <a href="{{websiteArray.sangeetha_mobiles.url}}" target="blank">
-                    <img src="{{websiteArray.sangeetha_mobiles.src}}" style="max-width: 11em;max-height: 4em;">
-                  </a>
-                </span>
               </td>
               <td></td>
             </tr>
@@ -120,30 +85,6 @@
           <img src="{{websiteArray.amazon.src}}" style="max-width: 7.7rem;max-height: 1.5rem;">
         </ng-template>
         <app-amazon></app-amazon>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.flipkart.src}}" style="max-width: 11rem;max-height: 3rem;">
-        </ng-template>
-        <app-flipkart></app-flipkart>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.paytm.src}}" style="max-width: 11rem;max-height: 3.125rem;">
-        </ng-template>
-        <app-paytm></app-paytm>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.sangeetha_mobiles.src}}" style="max-width: 11rem;max-height: 4rem;">
-        </ng-template>
-        <app-sangeethamobiles></app-sangeethamobiles>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.croma.src}}" style="max-width: 11rem;max-height: 4rem;">
-        </ng-template>
-        <app-croma></app-croma>
       </mat-tab>
     </mat-tab-group>
   </div>

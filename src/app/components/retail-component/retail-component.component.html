@@ -20,21 +20,6 @@
               </td>
             </tr>
             <tr>
-              <!--Website-->
-              <td [ngSwitch]="product.website" style="max-width: 18.125rem;">
-                <span *ngSwitchCase="'sangeetha_mobiles'">
-                  <a href="{{websiteArray.sangeetha_mobiles.url}}" target="blank">
-                    <img src="{{websiteArray.sangeetha_mobiles.src}}" style="max-width: 11rem;max-height: 4rem;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'croma'">
-                  <a href="{{websiteArray.croma.url}}" target="blank">
-                    <img src="{{websiteArray.croma.src}}" style="max-width: 11rem;max-height: 4rem;">
-                  </a>
-                </span>
-              </td>
-            </tr>
-            <tr>
               <td><clr-icon shape="rupee"></clr-icon>{{product.price}}</td>
               <td></td>
             </tr>
@@ -64,22 +49,6 @@
               </td>
             </tr>
             <tr>
-              <!--Website-->
-              <td [ngSwitch]="product.website" style="max-width: 18.125em;">
-                <span *ngSwitchCase="'sangeetha_mobiles'">
-                  <a href="{{websiteArray.sangeetha_mobiles.url}}" target="blank">
-                    <img src="{{websiteArray.sangeetha_mobiles.src}}" style="max-width: 11em;max-height: 4em;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'croma'">
-                  <a href="{{websiteArray.croma.url}}" target="blank">
-                    <img src="{{websiteArray.croma.src}}" style="max-width: 11rem;max-height: 4rem;">
-                  </a>
-                </span>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
               <td><clr-icon shape="rupee"></clr-icon>{{product.price}}</td>
               <td></td>
             </tr>
@@ -87,23 +56,6 @@
         </mat-card>
       </ng-container>
     </div>
-  </div>
-
-  <div *ngIf="!view_status">
-    <mat-tab-group>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.sangeetha_mobiles.src}}" style="max-width: 11rem;max-height: 4rem;">
-        </ng-template>
-        <app-sangeethamobiles></app-sangeethamobiles>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.croma.src}}" style="max-width: 11rem;max-height: 4rem;">
-        </ng-template>
-        <app-croma></app-croma>
-      </mat-tab>
-    </mat-tab-group>
   </div>
 
 

@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WebsitesService {
 
-  private websiteService = new BehaviorSubject<any>("");
-  currentWebData = this.websiteService.asObservable();
+  currentWebData = new Subject<any>();
 
   constructor() { }
 
   dynamicWebData(webdata: any) {
-    this.websiteService.next(webdata);
+    debugger;
+    this.currentWebData.next(webdata);
   }
 }

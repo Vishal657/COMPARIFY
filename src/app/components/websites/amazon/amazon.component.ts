@@ -32,6 +32,7 @@ export class AmazonComponent implements OnInit {
       });
 
     this.ws.currentWebData.subscribe(webData => {
+      debugger;
       if (webData) {
         if (webData.amazon.length > 0){
           this.amazonArray = webData.amazon;

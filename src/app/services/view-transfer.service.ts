@@ -12,6 +12,7 @@ export class ViewTransferService {
   constructor() { }
 
   changeView(vid: any) {
+    debugger;
     this.viewService.next(vid);
   }
 

@@ -41,7 +41,7 @@ export class MainComponentComponent implements OnInit {
   public mobile_view: boolean;
   public login_bool: boolean;
 
-  constructor(private fetcherService: FetcherService, private dts:DataTransferService, private ws:WebsitesService, private vts:ViewTransferService, private router: Router, private prs: PreviousRouteService, private breakpointObserver: BreakpointObserver, private spinner: NgxSpinnerService, private loginService: LoginService) {
+  constructor(private fetcherService: FetcherService, private dts: DataTransferService, private ws: WebsitesService, private vts: ViewTransferService, private router: Router, private prs: PreviousRouteService, private breakpointObserver: BreakpointObserver, private spinner: NgxSpinnerService, private loginService: LoginService) {
   }
 
   ngOnInit(): void {
@@ -97,7 +97,7 @@ export class MainComponentComponent implements OnInit {
 
     // Retrieve view status on reload
     var vid;
-    if (sessionStorage.getItem('VIEW') === null){
+    if (sessionStorage.getItem('VIEW') === null) {
       vid = 1;
     }
     else {
@@ -110,7 +110,7 @@ export class MainComponentComponent implements OnInit {
 
 
 
-  mergedbool :boolean;
+  mergedbool: boolean;
 
   setMergeStatus(mergedbool: boolean) {
     this.mergedbool = mergedbool;
@@ -135,9 +135,9 @@ export class MainComponentComponent implements OnInit {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
-  search(event: any){
+  search(event: any) {
     //SEARCHED EVENT TRIGGERED ON ENTER KEY-PRESS
-    if (event.keyCode == 13 || event.type == "click"){
+    if (event.keyCode == 13 || event.type == "click") {
       this.spinner.show('search');
       this.user_query = this.user_input;
 
@@ -157,9 +157,9 @@ export class MainComponentComponent implements OnInit {
   }
 
 
-  newDescription(newdesc:string, method:boolean) {
+  newDescription(newdesc: string, method: boolean) {
     console.log("Sending to the service from parent component");
-
+    debugger;
     var descArray = JSON.parse(newdesc);
     console.log(descArray);
     var dataArray;
@@ -177,7 +177,7 @@ export class MainComponentComponent implements OnInit {
         if (data_obj.store_type == "retail") {
           retailArray.push(data_obj);
         }
-        else{
+        else {
           onlineArray.push(data_obj);
         }
         this.mergedArray.push(data_obj);
@@ -201,34 +201,18 @@ export class MainComponentComponent implements OnInit {
 
 
     this.online_badge = dataArray.online.length;
-    this.retail_badge = dataArray.retail.length;
+    this.retail_badge = dataArray.retail?.length;
     this.merged_badge = this.online_badge + this.retail_badge;
 
     var webData = {
       amazon: [],
-      flipkart: [],
-      paytm: [],
-      sangeethaMobiles: [],
-      croma: []
     };
 
-    for(var i=0;i<this.mergedArray.length;i++) {
+    for (var i = 0; i < this.mergedArray?.length; i++) {
       var website = this.mergedArray[i].website;
       switch (website) {
-        case 'amazon' :
+        case 'amazon':
           webData.amazon.push(this.mergedArray[i]);
-          break;
-        case 'flipkart' :
-          webData.flipkart.push(this.mergedArray[i]);
-          break;
-        case 'paytm' :
-          webData.paytm.push(this.mergedArray[i]);
-          break;
-        case 'sangeetha_mobiles' :
-          webData.sangeethaMobiles.push(this.mergedArray[i]);
-          break;
-        case 'croma' :
-          webData.croma.push(this.mergedArray[i]);
           break;
         default:
           break;
@@ -243,13 +227,13 @@ export class MainComponentComponent implements OnInit {
 
   }
 
-  changeView(vid:number) {
+  changeView(vid: number) {
     sessionStorage.removeItem('VIEW');
-    sessionStorage.setItem('VIEW',JSON.stringify(vid));
+    sessionStorage.setItem('VIEW', JSON.stringify(vid));
     this.vts.changeView(vid);
   }
 
-  changeSort(sort_id:number) {
+  changeSort(sort_id: number) {
     if (sessionStorage.getItem("SESSION_DATA_ARRAY") === null) {
       // Do Nothing
       console.log('NO DATA FOUND');
@@ -258,7 +242,7 @@ export class MainComponentComponent implements OnInit {
       var stored_data = JSON.parse(sessionStorage.getItem("SESSION_DATA_ARRAY"));
       var data = JSON.stringify(stored_data.merge);
       const sort_proto: Sort = {
-        data : data,
+        data: data,
         sort_id: sort_id
       };
       this.fetcherService.postSort(sort_proto).subscribe(new_data => {

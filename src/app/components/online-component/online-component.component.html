@@ -26,20 +26,10 @@
                     <img src="{{websiteArray.amazon.src}}" style="max-width: 7.7rem;max-height: 1.5rem;">
                   </a>
                 </span>
-                <span *ngSwitchCase="'flipkart'">
-                  <a href="{{websiteArray.flipkart.url}}" target="blank">
-                    <img src="{{websiteArray.flipkart.src}}" style="max-width: 11rem;max-height: 3rem;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'paytm'">
-                  <a href="{{websiteArray.paytm.url}}" target="blank">
-                    <img src="{{websiteArray.paytm.src}}" style="max-width: 11rem;max-height: 3.125rem;">
-                  </a>
-                </span>
               </td>
             </tr>
             <tr>
-              <td><clr-icon shape="rupee"></clr-icon>{{product.price}}</td>
+              <td><clr-icon shape="rupee"></clr-icon>{{formatPrice(product.price)}}</td>
               <td></td>
             </tr>
           </table>
@@ -76,16 +66,6 @@
                     <img src="{{websiteArray.amazon.src}}" style="max-width: 7.7em;max-height: 1.5em;">
                   </a>
                 </span>
-                <span *ngSwitchCase="'flipkart'">
-                  <a href="{{websiteArray.flipkart.url}}" target="blank">
-                    <img src="{{websiteArray.flipkart.src}}" style="max-width: 11em;max-height: 3em;">
-                  </a>
-                </span>
-                <span *ngSwitchCase="'paytm'">
-                  <a href="{{websiteArray.paytm.url}}" target="blank">
-                    <img src="{{websiteArray.paytm.src}}" style="max-width: 11em;max-height: 3.125em;">
-                  </a>
-                </span>
               </td>
               <td></td>
             </tr>
@@ -106,18 +86,6 @@
           <img src="{{websiteArray.amazon.src}}" style="max-width: 7.7rem;max-height: 1.5rem;">
         </ng-template>
         <app-amazon></app-amazon>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.flipkart.src}}" style="max-width: 11rem;max-height: 3rem;">
-        </ng-template>
-        <app-flipkart></app-flipkart>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="{{websiteArray.paytm.src}}" style="max-width: 11rem;max-height: 3.125rem;">
-        </ng-template>
-        <app-paytm></app-paytm>
       </mat-tab>
     </mat-tab-group>
   </div>
